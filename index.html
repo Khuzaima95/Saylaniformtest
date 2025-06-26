@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+<body class="bg-white">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex space-x-4">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" class="h-6 w-6" alt="Facebook">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" class="h-6 w-6" alt="Instagram">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAattKmTiGTxZfuEArH890oVlBI2dl-4orqg&s" class="h-6 w-6" alt="YouTube">
+      </div>
+
+        <div class="text-center">
+    <img src="Saylanilogo.png" alt="Saylani Logo" width="360" class="mx-auto mb-4">
+    <h1 class="text-4xl font-bold mb-2">Registration Form - SMIT</h1>
+    <p class="text-lg">Services - Education - Registration</p>
+  </div>
+
+      <div>
+        <a href="#" class="border border-blue-600 text-blue-600 px-4 py-2 rounded-full hover:bg-blue-600 hover:text-white transition">🎓 Student portal</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tabs -->
+  <nav class="flex justify-center border-t ">
+    <a href="#" class="px-6 py-3 text-lime-500 font-semibold cursorpointer ">Registration</a>
+    <a href="#" class="px-6 py-3 text-blue-600 hover:text-blue-800 cursorpointer ">Download ID Card</a>
+    <a href="#" class="px-6 py-3 text-blue-600 hover:text-blue-800">Results</a>
+  </nav>
+
+  <!-- Form -->
+  <form class="max-w-6xl mx-auto p-6 space-y-6">
+
+<div class="flex flex-wrap gap-6">
+  <!-- Country -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Select country</label>
+    <select class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+      <option selected disabled>Select country</option>
+      <option>Pakistan</option>
+      <option>Turkey</option>
+    </select>
+  </div>
+
+  <!-- City -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Select city</label>
+    <select class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+      <option selected disabled>Select city</option>
+      <option>Karachi</option>
+      <option>Lahore</option>
+      <option>Islamabad</option>
+      <option>Quetta</option>
+    </select>
+  </div>
+
+  <!-- Course -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Select course or event</label>
+    <select class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+      <option selected disabled>Select course or event</option>
+      <option>Web Development</option>
+      <option>Graphic Design</option>
+      <option>AI & Chatbot</option>
+
+    </select>
+  </div>
+
+  <!-- Computer Proficiency -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Select your computer proficiency</label>
+    <select class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+      <option selected disabled>Select your computer proficiency</option>
+      <option>None</option>
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advance</option>
+    </select>
+  </div>
+</div>
+
+<div class="flex flex-wrap gap-6">
+
+  <!-- Name -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Full Name</label>
+    <input type="text" placeholder="Enter your name" class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+  </div>
+
+  <!-- Father's Name -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Father's Name</label>
+    <input type="text" placeholder="Enter father's name" class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+  </div>
+
+  <!-- Email -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Email</label>
+    <input type="email" placeholder="Enter your email" class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+  </div>
+
+  <!-- Phone Number -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Phone Number</label>
+    <input type="tel" placeholder="Enter your phone number" class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+  </div>
+
+  <!-- CNIC -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">CNIC</label>
+    <input type="text" placeholder="Enter your CNIC" class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+  </div>
+
+  <!-- Father's CNIC (optional) -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Father's CNIC (Optional)</label>
+    <input type="text" placeholder="Enter father's CNIC (optional)" class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+  </div>
+
+  <!-- Date of Birth -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Date of Birth</label>
+    <input type="date" class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+  </div>
+
+  <!-- Gender -->
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Select Gender</label>
+    <select class="w-[540px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+      <option selected disabled>Select gender</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
+
+</div>
+
+
+  <!-- Address -->
+   <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Address</label>
+      <input type="text" placeholder="Address" class="w-[1105px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+   </select>
+  </div>
+
+   <!-- Qualification -->
+
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Qualification</label>
+      <input type="text" placeholder="Qualification" class="w-[1105px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+   </select>
+  </div>
+
+  <!-- Laptop -->
+
+  <div class="flex flex-col">
+    <label class="text-blue-600 mb-1">Do you Have a Laptop?</label>
+    <select class="w-[1105px] h-[50px] px-4 border border-lime-500 rounded text-gray-400">
+      <option selected disabled>Do you Have a Laptop?</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+  </div>
+
+
+
+    <!-- Picture Upload -->
+
+    
+      <label class="text-blue-600 mb-1">Picture</label>
+      <div>
+      <input type="file" class="mb-2">
+      <ul class="text-sm text-gray-600 list-disc list-inside">
+        <li>With white or blue background</li>
+        <li>File size must be less than 1MB</li>
+        <li>File type: jpg, jpeg, png</li>
+        <li>Upload your recent passport size picture</li>
+        <li>Your face should be clearly visible without any glasses</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <!-- Terms -->
+    <ol class="text-sm text-gray-800 list-decimal list-inside space-y-1">
+      <li>I hereby declare that the data is true to the best of my knowledge.</li>
+      <li>I will not be involved in any unethical or political activity.</li>
+      <li>Offensive behavior can cancel admission.</li>
+      <li>I will complete the required project if enrolled.</li>
+      <li>Female students must wear abaya/hijab in class.</li>
+    </ol>
+
+    <!-- Submit Button -->
+    <button type="submit" class="w-full bg-[#68a4d4] text-white py-3 rounded font-semibold ">
+      SUBMIT
+    </button>
+
+  </form>
+
+</body>
+</html>
