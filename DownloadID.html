@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <title>SMIT Registration</title>
+  </head>
+  <body class="bg-white">
+
+    <!-- Header -->
+    <header class="bg-white shadow p-4">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <!-- Social Icons -->
+        <div class="flex space-x-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" class="h-6 w-6" alt="Facebook">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" class="h-6 w-6" alt="Instagram">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAattKmTiGTxZfuEArH890oVlBI2dl-4orqg&s" class="h-6 w-6" alt="YouTube">
+        </div>
+
+        <!-- Center Logo & Title -->
+        <div class="text-center">
+          <img src="Saylanilogo.png" alt="Saylani Logo" class="mx-auto w-64 mb-2">
+          <h1 class="text-2xl md:text-4xl font-bold">Registration Form - SMIT</h1>
+          <p class="text-base md:text-lg">Services - Education - Registration</p>
+        </div>
+
+        <!-- Student Portal Button -->
+        <div>
+          <a href="#" class="border border-blue-600 text-blue-600 px-4 py-2 rounded-full hover:bg-blue-600 hover:text-white transition">🎓 Student portal</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="flex justify-center border-t border-b mt-4">
+      <a href="index.html" class="px-4 py-3 text-blue-600 hover:text-blue-800">Registration</a>
+      <a href="DownloadID.html" class="px-4 py-3 text-lime-500 font-semibold">Download ID Card</a>
+      <a href="#" class="px-4 py-3 text-blue-600 hover:text-blue-800">Results</a>
+    </nav>
+
+    <!-- Form -->
+    <form id="registrationForm" class="max-w-5xl mx-auto p-4 md:p-8 space-y-6">
+
+      <!-- Selects -->
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="text-blue-600 mb-1 block">Select course or event</label>
+          <select id="course" class="w-full h-12 px-4 border border-lime-500 rounded text-gray-500" required>
+            <option selected disabled>Select course or event</option>
+            <option value="WD">Web Development</option>
+            <option value="GD">Graphic Design</option>
+            <option value="AI">AI & Chatbot</option>
+            <option value="AI">Graphic Designing</option>
+            <option value="AI">Digital Marketing</option>
+            <option value="AI">Flutter</option>
+            <option value="AI">Mobile App Development</option>
+
+          </select>
+        </div>
+        <div>
+          <label class="text-blue-600 mb-1 block">Batch Number</label>
+          <input id="batch" type="text" placeholder="Enter batch" class="w-full h-12 px-4 border border-lime-500 rounded text-gray-500" required>
+        </div>
+      </div>
+
+      <!-- Personal Info -->
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="text-blue-600 mb-1 block">Full Name</label>
+          <input id="fullName" type="text" placeholder="Enter your name" class="w-full h-12 px-4 border border-lime-500 rounded text-gray-500" required>
+        </div>
+        <div>
+          <label class="text-blue-600 mb-1 block">Father's Name</label>
+          <input id="fatherName" type="text" placeholder="Enter father's name" class="w-full h-12 px-4 border border-lime-500 rounded text-gray-500" required>
+        </div>
+        <div>
+          <label class="text-blue-600 mb-1 block">CNIC</label>
+          <input id="cnic" type="text" placeholder="Enter your CNIC" class="w-full h-12 px-4 border border-lime-500 rounded text-gray-500" required>
+        </div>
+      </div>
+
+      <!-- Picture Upload -->
+      <div>
+        <label class="text-blue-600 mb-1 block">Picture</label>
+        <input id="picture" type="file" accept="image/*" class="mb-2" required>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="w-full bg-[#68a4d4] text-white py-3 rounded font-semibold">
+        SUBMIT
+      </button>
+    </form>
+
+    <!-- ID Card Section (Hidden initially) -->
+    <div id="idCardSection" class="hidden flex flex-col md:flex-row gap-10 justify-center mt-10">
+
+      <!-- Front Side -->
+      <div class="w-80 h-[420px] border rounded-lg shadow-lg bg-white text-center p-4">
+        <img src="Saylanilogo.png" alt="Saylani Logo" class="mx-auto w-32 mb-2">
+        <br>
+
+        <img id="studentImage" src="" alt="Student Image" class="w-32 h-32 mx-auto rounded-full border mb-2 object-cover">
+        <br>
+        <br>
+    
+        <h2 id="studentName" class="text-xl font-bold"></h2>
+        <p id="studentCourse" class="text-lg text-gray-600"></p>
+        <p id="studentRoll" class="text-lg font-semibold text-blue-600"></p>
+      </div>
+
+      <!-- Back Side -->
+      <div class="w-80 h-[420px] border rounded-lg shadow-lg bg-white p-4">
+        <h2 id="backName" class="text-xl font-bold text-center"></h2>
+        <p id="backFather" class="text-gray-700 mt-2"></p>
+        <p id="backCnic" class="text-gray-700"></p>
+        <p id="backCourse" class="text-gray-700"></p>
+        <p id="backBatch" class="text-gray-700 mb-4"></p>
+        <br>
+        
+        <!-- QR Code -->
+        <div id="qrcode" class="flex justify-center mb-4"></div>
+
+        <!-- Note -->
+        <p class="text-sm text-gray-600 mt-4">
+          This card is for SMIT premises only. <br>
+          If found please return to SMIT.
+        </p>
+
+        <!-- Signature -->
+        <div class="mt-8 text-right">
+          <p class="text-gray-700">_________________</p>
+          <p class="text-sm font-semibold">Issuing Authority</p>
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      let rollCounter = 10000;
+
+      document.getElementById("registrationForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        // Get values
+        const name = document.getElementById("fullName").value;
+        const father = document.getElementById("fatherName").value;
+        const cnic = document.getElementById("cnic").value;
+        const course = document.getElementById("course").value;
+        const courseText = document.getElementById("course").options[document.getElementById("course").selectedIndex].text;
+        const batch = document.getElementById("batch").value;
+
+        // Roll Number
+        rollCounter++;
+        const rollNumber = `${course}-${rollCounter}`;
+
+        // Handle Image
+        const file = document.getElementById("picture").files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          // Hide form, show card
+          document.getElementById("registrationForm").classList.add("hidden");
+          document.getElementById("idCardSection").classList.remove("hidden");
+
+          // Front side
+          document.getElementById("studentImage").src = e.target.result;
+          document.getElementById("studentName").innerText = name;
+          document.getElementById("studentCourse").innerText = courseText;
+          document.getElementById("studentRoll").innerText = `Roll No: ${rollNumber}`;
+
+          // Back side
+          document.getElementById("backName").innerText = name;
+          document.getElementById("backFather").innerText = "Father's Name: " + father;
+          document.getElementById("backCnic").innerText = "CNIC: " + cnic;
+          document.getElementById("backCourse").innerText = "Course: " + courseText;
+          document.getElementById("backBatch").innerText = "Batch: " + batch;
+
+          // QR Code
+          document.getElementById("qrcode").innerHTML = "";
+          new QRCode(document.getElementById("qrcode"), {
+            text: rollNumber,
+            width: 100,
+            height: 100
+          });
+        };
+        reader.readAsDataURL(file);
+      });
+    </script>
+  </body>
+</html>
